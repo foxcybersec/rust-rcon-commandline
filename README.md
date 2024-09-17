@@ -37,7 +37,7 @@ A powerful and user-friendly command-line interface for interacting with Rust ga
 Run the script with the following command-line arguments:
 
 ```
-python rust_rcon_client.py -H <host> -P <port> -p <password> -c <command> [options]
+python rust_rcon.py -H <host> -P <port> -p <password> -c <command> [options]
 ```
 
 ### Arguments
@@ -53,22 +53,22 @@ python rust_rcon_client.py -H <host> -P <port> -p <password> -c <command> [optio
 
 1. Get server information:
    ```
-   python rust_rcon_client.py -H 127.0.0.1 -P 28016 -p mypassword -c "serverinfo"
+   python rust_rcon.py -H 127.0.0.1 -P 28016 -p mypassword -c "serverinfo"
    ```
 
 2. Broadcast a message to all players:
    ```
-   python rust_rcon_client.py -H 127.0.0.1 -P 28016 -p mypassword -c "say Hello, players!"
+   python rust_rcon.py -H 127.0.0.1 -P 28016 -p mypassword -c "say Hello, players!"
    ```
 
 3. Get a list of all connected players with verbose output:
    ```
-   python rust_rcon_client.py -H 127.0.0.1 -P 28016 -p mypassword -c "players" -v
+   python rust_rcon.py -H 127.0.0.1 -P 28016 -p mypassword -c "players" -v
    ```
 
 4. Print the raw JSON response:
    ```
-   python rust_rcon_client.py -H 127.0.0.1 -P 28016 -p mypassword -c "serverinfo" --raw
+   python rust_rcon.py -H 127.0.0.1 -P 28016 -p mypassword -c "serverinfo" --raw
    ```
 
 ## Error Handling
