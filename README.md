@@ -9,7 +9,7 @@ A powerful and user-friendly command-line interface for interacting with Rust ga
 ## Features
 
 - 🚀 Easy-to-use command-line interface
-- 🔐 Secure WebSocket-based RCON communication
+- 🔐 WebSocket-based RCON communication
 - 🛠 Support for custom commands
 - 📊 Optional verbose output for debugging
 - 🖨 Raw JSON response printing capability
