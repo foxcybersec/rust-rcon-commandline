@@ -39,7 +39,7 @@ class RustRCONClient:
 
         :raises RustRCONError: If connection fails
         """
-        url = f"wss://{self.host}:{self.port}/{self.password}"
+        url = f"ws://{self.host}:{self.port}/{self.password}"
         try:
             self.ws = websocket.create_connection(url, timeout=10)
             self.logger.debug(f"Connected to {self.host}:{self.port}")
