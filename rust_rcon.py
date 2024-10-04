@@ -71,7 +71,7 @@ def main():
     parser.add_argument("-H", "--host", required=True, help="Server hostname or IP address")
     parser.add_argument("-P", "--port", type=int, required=True, help="Server RCON port")
     parser.add_argument("-p", "--password", required=True, help="RCON password")
-    parser.add_argument("-c", "--command", nargs='+', required=True, help="Command to execute (use quotes for commands with spaces)")
+    parser.add_argument("-c", "--command", required=True, help="Command to execute (use quotes for commands with spaces)")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
     parser.add_argument("--raw", action="store_true", help="Print raw JSON response")
     parser.add_argument("--retry", type=int, default=3, help="Number of connection retry attempts")
@@ -87,8 +87,7 @@ def main():
     for attempt in range(args.retry):
         try:
             client.connect()
-            full_command = " ".join(args.command)
-            response = client.send_command(full_command)
+            response = client.send_command(args.command)
             
             if args.raw:
                 print(json.dumps(response, indent=2))
