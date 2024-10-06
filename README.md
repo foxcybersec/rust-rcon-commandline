@@ -23,7 +23,7 @@ A powerful and user-friendly command-line interface for interacting with Rust ga
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/rust-rcon-commandline.git
+   git clone https://github.com/foxcybersec/rust-rcon-commandline.git
    cd rust-rcon-commandline
    ```
 
